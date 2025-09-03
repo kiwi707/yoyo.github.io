@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="zh">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flclash 使用教程</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css">
+  <style>
+    body { font-family: "Helvetica Neue", Arial, sans-serif; margin:0; padding:0; line-height:1.6; background:#fdfdfd; color:#333; }
+    header { background:#2c3e50; color:white; padding:15px 20px; position:sticky; top:0; z-index:100; }
+    header h1 { margin:0; font-size:24px; display:inline-block; }
+    nav { float:right; }
+    nav a { color:white; text-decoration:none; margin-left:15px; font-weight:500; }
+    nav a:hover { text-decoration:underline; }
+    main { max-width:900px; margin:20px auto; padding:0 15px; }
+    h2 { color:#2c3e50; margin-top:40px; cursor:pointer; }
+    h3 { color:#34495e; margin-top:25px; }
+    pre { background:#f4f4f4; padding:10px; border-radius:5px; overflow-x:auto; }
+    code { color:#c7254e; background:#f9f2f4; padding:2px 4px; border-radius:3px; }
+    img { max-width:100%; border:1px solid #ddd; border-radius:5px; margin:10px 0; }
+    ul { margin-bottom:20px; padding-left:20px; }
+    footer { text-align:center; padding:15px 0; margin-top:40px; border-top:1px solid #ddd; color:#777; font-size:14px; }
+    a.button { display:inline-block; background:#3498db; color:white; padding:6px 12px; border-radius:4px; text-decoration:none; margin-top:5px; }
+    a.button:hover { background:#2980b9; }
+    .collapsible-content { display:none; margin-left:10px; padding:10px; border-left:2px solid #3498db; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Flclash 教程</h1>
+    <nav>
+      <a href="#install">安装</a>
+      <a href="#config">配置</a>
+      <a href="#run">运行</a>
+      <a href="#faq">常见问题</a>
+    </nav>
+  </header>
+
+  <main>
+    <h2 id="install" onclick="toggleContent('installContent')">1. 安装 Flclash 🔽</h2>
+    <div id="installContent" class="collapsible-content">
+      <p>Flclash 支持 Windows、Mac、Android 等系统，可以从官方 GitHub 下载最新版本：</p>
+      <a href="https://github.com/Fndroid/clash_for_windows_pkg" class="button" target="_blank">访问 GitHub 下载</a>
+      <ul>
+        <li>下载对应系统的安装包</li>
+        <li>双击安装，按默认选项完成安装</li>
+        <li>安装完成后启动 Flclash</li>
+      </ul>
+      <p>示意截图：</p>
+      <img src="screenshot_install.png" alt="安装截图">
+    </div>
+
+    <h2 id="config" onclick="toggleContent('configContent')">2. 配置 Clash 🔽</h2>
+    <div id="configContent" class="collapsible-content">
+      <ul>
+        <li>打开 Flclash → 点击“配置文件管理”</li>
+        <li>导入 Clash 配置文件（.yaml 或 .yml）</li>
+        <li>选择配置文件 → 启用系统代理或全局模式</li>
+      </ul>
+      <p>示意截图：</p>
+      <img src="screenshot_config.png" alt="配置截图">
+    </div>
+
+    <h2 id="run" onclick="toggleContent('runContent')">3. 运行 Flclash 🔽</h2>
+    <div id="runContent" class="collapsible-content">
+      <ul>
+        <li>确认代理模式 → 点击“启动”</li>
+        <li>查看日志，确认服务已启动</li>
+        <li>尝试访问需要代理的网站，确认可用</li>
+      </ul>
+      <p>示意截图：</p>
+      <img src="screenshot_running.png" alt="运行截图">
+    </div>
+
+    <h2 id="faq" onclick="toggleContent('faqContent')">4. 常见问题 🔽</h2>
+    <div id="faqContent" class="collapsible-content">
+      <ul>
+        <li>网站打不开：检查系统代理设置是否正确</li>
+        <li>配置文件无法导入：确保文件格式为 <code>.yaml</code> 或 <code>.yml</code></li>
+        <li>启动失败：尝试以管理员权限运行 Flclash</li>
+      </ul>
+    </div>
+  </main>
+
+  <footer>
+    教程作者：高桥健一 | 更新日期：2025-09-03
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+  <script>hljs.highlightAll();</script>
+  <script>
+    function toggleContent(id){
+      const el = document.getElementById(id);
+      el.style.display = (el.style.display==='none'||el.style.display==='') ? 'block' : 'none';
+    }
+  </script>
+</body>
+</html>
