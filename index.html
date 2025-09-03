@@ -19,13 +19,13 @@
     h3 { color:#34495e; margin-top:25px; }
     pre { background:#f4f4f4; padding:10px; border-radius:5px; overflow-x:auto; }
     code { color:#c7254e; background:#f9f2f4; padding:2px 4px; border-radius:3px; }
-    img { max-width:100%; border:1px solid #ddd; border-radius:5px; margin:10px 0; }
+    img { max-width:100%; height:auto; display:block; border:1px solid #ddd; border-radius:5px; margin:10px 0; }
     ul { margin-bottom:20px; padding-left:20px; }
     footer { text-align:center; padding:15px 0; margin-top:40px; border-top:1px solid #ddd; color:#777; font-size:14px; }
     a.button { display:inline-block; background:#3498db; color:white; padding:6px 12px; border-radius:4px; text-decoration:none; margin-top:5px; }
     a.button:hover { background:#2980b9; }
-    .collapsible-content { max-height:0; overflow:hidden; transition:max-height 0.4s ease; margin-left:10px; padding:0 10px; border-left:2px solid #3498db; }
-    .collapsible-content.show { padding-top:10px; max-height:1000px; }
+    .collapsible-content { display:none; margin-left:10px; padding:10px; border-left:2px solid #3498db; }
+    .collapsible-content.show { display:block; }
     .dark-mode { background:#1e1e1e; color:#ddd; }
     .dark-mode header { background:#111; }
     .dark-mode h2, .dark-mode h3 { color:#ddd; }
@@ -57,7 +57,7 @@
         <a href="#shadow_install">Shadowrocket 安装</a>
         <a href="#shadow_config">Shadowrocket 配置</a>
         <a href="#shadow_run">Shadowrocket 运行</a>
-        <a href="#faq">常见问题</a>
+        <a href="#faq_title">常见问题</a>
       </nav>
       <button onclick="toggleDarkMode()" style="margin-left:10px; padding:6px 10px; border:none; border-radius:6px; cursor:pointer; background:#444; color:#fff;">🌙</button>
     </div>
@@ -137,7 +137,6 @@
         <li>配置导入失败：确保配置文件格式正确</li>
       </ul>
     </div>
-
   </main>
 
   <footer>
