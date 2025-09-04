@@ -82,7 +82,7 @@
         <li>点击页面右下角的“+”,选择“URL”</li>
         <li>在弹出的页面中输入您获取的配置链接（<a href="https://t.me/weekin" target="_blank">点击获取配置链接</a>），点击“提交”</li>
         <li>稍等片刻即加载完成，加载完成后软件底部会多出来一个“代理”选项卡</li>
-        <li>该配置文件已经做好了国内外分流，国内网站自动直连，国外网站自动走代理，可以24小时打开该软件，对你的日常上网不会产生任何影响，做到了真正的无感</li>
+        <li>该配置文件已经做好了国内外分流，国内网站自动直连，国外网站自动走代理，可以24小时打开该软件，对你的日常上网不会产生任何影响，做到了真正的无感冲浪</li>
       </ul>
     </div>
 
@@ -100,26 +100,33 @@
     <div id="shadowInstallGallery" class="collapsible-content">
       <p>在 App Store 下载 Shadowrocket：</p>
       <ul>
-        <li>安装完成后打开应用</li>
-        <li>允许必要权限</li>
+        <li>打开 App Store</li>
+        <li>搜索 ShadowRocket（需要使用非中国区 Apple ID，例如美区/港区账号）。</li>
+		<li>付费下载（约 2.99 美元）。</li>
+		<li>下载完成后，桌面会出现火箭图标。</li>
+		<li>准备订阅链接</li>
+		<li>如果有服务商提供的订阅链接（通常是 https://xxxx 开头），复制备用。</li>
+		
+		
       </ul>
     </div>
 
     <h2 id="shadow_config" onclick="toggleContent('shadowConfigGallery', this)">⚙️Shadowrocket 配置 🔽</h2>
     <div id="shadowConfigGallery" class="collapsible-content">
+	  <p>这里分为两部分，分别是导入订阅链接和配置文件（小火箭的节点和配置是相互独立的）</p>
       <ul>
-        <li>点击右上角“+” → 添加配置</li>
-        <li>输入服务器信息或导入配置文件</li>
-        <li>保存并启用配置</li>
+        <li>打开 ShadowRocket</li>
+        <li>进入“配置” ，右上角加号，输入“https://raw.githubusercontent.com/kiwi707/yoyo.github.io/refs/heads/main/ShadowRocket.conf”，稍等片刻即下载完成，这是配置文件</li>
+        <li>点击软件下方的“首页”，点击右上角加号，类型选择“subscribe”，URL填写你自己的订阅链接，其他不动，再点击保存即可，至此ShadowRocket已配置完成</li>
       </ul>
     </div>
 
     <h2 id="shadow_run" onclick="toggleContent('shadowRunGallery', this)">🚀Shadowrocket 运行 🔽</h2>
     <div id="shadowRunGallery" class="collapsible-content">
       <ul>
-        <li>启用代理开关</li>
-        <li>查看连接状态</li>
-        <li>尝试访问需要代理的网站，确认可用</li>
+        <li>打开 ShadowRocket 主界面</li>
+        <li>将右上角的开关打开（变成绿色）</li>
+        <li>出现 VPN 图标 表示成功连接</li>
       </ul>
     </div>
 
@@ -132,8 +139,9 @@
       </ul>
       <h3>Shadowrocket FAQ</h3>
       <ul>
-        <li>连接失败：检查服务器信息或网络是否通畅</li>
-        <li>配置导入失败：确保配置文件格式正确</li>
+        <li>无法下载：请先注册一个非中国区 Apple ID，且需付费下载</li>
+        <li>节点不可用：检查订阅是否过期，或者尝试更换节点</li>
+		<li>开启后无网络：确认系统 VPN 已连接，尝试切换节点</li>
       </ul>
     </div>
   </main>
@@ -201,7 +209,7 @@
 
     addImages('flclashRunGallery', [
       '03_run_1.png','03_run_2.png','03_run_3.png'
-    ], ['运行步骤1','运行步骤2','该页面是策略组页面，可按不同应用使用不同地区的节点，以Telegram为例，下方的选项卡分别对应不同地区，HK对应香港、TW对应台湾、JP对应日本、SG对应新加坡，其他的自行查询，绿色数字代表该地区节点可用，红色timeout代表该地区无节点可用，Telegram对IP不敏感，任意地区都可以选择，根据自己喜好选择即可，其他策略组同理']);
+    ], ['运行步骤1','运行步骤2','该页面是策略组页面，可按不同应用使用不同地区的节点，以Telegram为例，下方的选项卡分别对应不同地区，HK对应香港、TW对应台湾、JP对应日本、SG对应新加坡，其他的自行查询，绿色数字代表该地区节点可用，红色timeout代表该地区无节点可用，Telegram对IP不敏感，任意地区都可以选择，根据自己喜好选择即可，其他策略组同理；同时该配置已对策略组做了URL-TEST，当某个节点不可用时，软件会自动切换下一个可用节点，保证稳定不断流']);
 
     addImages('shadowInstallGallery', [
       '11_install_1.png','11_install_2.png','11_install_3.png'
